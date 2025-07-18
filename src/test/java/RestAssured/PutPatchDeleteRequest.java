@@ -26,8 +26,16 @@ public class PutPatchDeleteRequest {
 		baseURI = "https://reqres.in/api";
 
 		// Prepare and send the PUT request
-		given().header("Content-Type", "application/json").contentType(ContentType.JSON).accept(ContentType.JSON)
-				.body(request.toJSONString()).when().put("/users/2").then().statusCode(200).log().all();
+		given().
+			header("Content-Type", "application/json").
+			contentType(ContentType.JSON).
+			accept(ContentType.JSON)
+			.body(request.toJSONString()).
+		when().
+			put("/users/2").
+		then().
+			statusCode(200).
+			log().all();
 	}
 
 	@Test
