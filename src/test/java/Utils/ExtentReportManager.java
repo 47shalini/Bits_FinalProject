@@ -51,14 +51,22 @@ public class ExtentReportManager implements ITestListener {
 	public void onFinish(ITestContext context) {
 		extent.flush();
 	}
-	
-	//Method for adding logs as info from test cases
-	 public static void reportLogInfo(String message) {    
-	    test.log(Status.INFO, message);
+
+	// Method for adding logs as info from test cases
+	public static void reportLogInfo(String message) {
+		if (test != null) {
+			test.log(Status.INFO, message);
+		} else {
+			System.out.println("[INFO] " + message);
+		}
 	}
 
-	//Method for adding logs as passed from test cases
-	 public static void reportLogPass(String message) {    
-		 test.log(Status.PASS, message);
+	// Method for adding logs as passed from test cases
+	public static void reportLogPass(String message) {
+		if (test != null) {
+			test.log(Status.PASS, message);
+		} else {
+			System.out.println("[PASS] " + message);
+		}
 	}
 }

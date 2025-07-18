@@ -17,6 +17,8 @@ public class DataProvide {
 		System. out.println(username+" ===== "+password+" === "+test);
 	}
 
+	//Both DataProvider methods create 2D arrays, but in different styles
+	//dataset1 - builds the array inline using simpler and more compact syntax
 	@DataProvider
 	public Object[][] dataSet1()
 	{
@@ -24,11 +26,12 @@ public class DataProvide {
 				{
 			{"username", "password", "test"},
 			{"username1", "password1", "test1"},
-			{"username2", "password1", "test1"},
+			{"username1", "password1", "test1"},
 			{ "username1", "password1", "test1"}
 				};
 	}
 	
+	// dataset - uses a fixed-size array and assigns each cell manually
 	@DataProvider
 	public Object[][] dataSet()
 	{

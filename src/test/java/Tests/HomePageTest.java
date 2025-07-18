@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
+import Utils.ExtentReportManager;
 import Utils.ReadPropertiesFile;
 import Utils.ReadXLdata;
 
@@ -26,35 +27,46 @@ public class HomePageTest extends BaseTest {
 		initialization();
 		logInPage = new LoginPage();
 		homePage = logInPage.login();
+		ExtentReportManager.reportLogInfo("User logged in successfully.");
 	}
 
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
+		ExtentReportManager.reportLogInfo("Browser closed after test.");
 	}
-	
-
 
 	@Test
 	public void validateHomepageTitle() {
-		Assert.assertEquals(homePage.validateTitle(), "Trade Panel :: Neostox", "Title is mismatching");
+		String title = homePage.validateTitle();
+		ExtentReportManager.reportLogInfo("Home Page Title: " + title);
+		Assert.assertEquals(title, "Trade Panel :: Neostox", "Title is mismatching");
+		ExtentReportManager.reportLogPass("Home Page title validation passed.");
+
 		try {
-			driver.wait(9000);
+			Thread.sleep(9000); // Use Thread.sleep instead of driver.wait
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 
-	@Test (dataProvider = "tradeData")
+	@Test(dataProvider = "tradeData")
 	public void placeEquityOrderTest(String securityName, String securityType, String quantity, String purchaseType) {
+		ExtentReportManager.reportLogInfo("Placing Equity Order with: " + "Security = " + securityName + ", Type = "
+				+ securityType + ", Qty = " + quantity + ", Buy/Sell = " + purchaseType);
+
 		homePage.placeEquityOrder(securityName, securityType, quantity, purchaseType);
+
+		ExtentReportManager.reportLogPass("Equity order placed successfully.");
 	}
 
 	@DataProvider()
 	public Object[][] tradeData() throws IOException {
 		String excelName = ReadPropertiesFile.readDataFromPropertiesFile("testDataExcelName");
 		String sheetName = ReadPropertiesFile.readDataFromPropertiesFile("testDataExcelSheetName");
-		
+
+		ExtentReportManager.reportLogInfo("Fetching test data from Excel: " + excelName + " | Sheet: " + sheetName);
+
 //		System.out.println(excelName);
 //		System.out.println(sheetName);
 
