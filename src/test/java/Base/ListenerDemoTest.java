@@ -7,7 +7,7 @@ public class ListenerDemoTest extends BaseTest{
 	@Test
 	public void launchApp() {
 		initialization();
-		driver.get("https://ebay.com");
+		BaseTest.getDriver().get("https://ebay.com");
 		Assert.assertTrue(false);
 	}
 }

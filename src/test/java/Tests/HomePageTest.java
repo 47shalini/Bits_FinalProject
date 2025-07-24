@@ -23,21 +23,20 @@ public class HomePageTest extends BaseTest {
 	HomePage homePage;
 
 	@BeforeMethod
-	public void setUP() {
+	public void setUP() throws InterruptedException {
 		initialization();
 		logInPage = new LoginPage();
 		homePage = logInPage.login();
-		ExtentReportManager.reportLogInfo("User logged in successfully.");
 	}
 
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
-		ExtentReportManager.reportLogInfo("Browser closed after test.");
+		BaseTest.getDriver().quit();
 	}
 
 	@Test
 	public void validateHomepageTitle() {
+		ExtentReportManager.reportLogInfo("User logged in successfully.");
 		String title = homePage.validateTitle();
 		ExtentReportManager.reportLogInfo("Home Page Title: " + title);
 		Assert.assertEquals(title, "Trade Panel :: Neostox", "Title is mismatching");

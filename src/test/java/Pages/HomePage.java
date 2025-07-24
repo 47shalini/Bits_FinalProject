@@ -29,15 +29,15 @@ public class HomePage extends BaseTest {
 	WebElement dropdown_searchSuggestions_homePage;
 
 	public HomePage() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(BaseTest.getDriver(), this);
 	}
 
 	public String validateTitle() {
 		// explicit wait condition
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(BaseTest.getDriver(), Duration.ofSeconds(10));
 		// presenceOfElementLocated condition
 		wait.until(ExpectedConditions.visibilityOf(text_searchBox_homePage));
-		return driver.getTitle();
+		return BaseTest.getDriver().getTitle();
 	}
 
 	public String validateUserName() {

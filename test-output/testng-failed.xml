@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="1" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="Tests.LoginPageTest">
+      <class name="Tests.HomePageTest">
         <methods>
-          <include name="teardown"/>
-          <include name="loginPageTitleTest"/>
-          <include name="setup"/>
+          <include name="setUP"/>
+          <include name="validateHomepageTitle"/>
+          <include name="tearDown"/>
+          <include name="placeEquityOrderTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Tests.LoginPageTest -->
+      </class> <!-- Tests.HomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Web Plarform For Advisor Trading automation test suite] -->

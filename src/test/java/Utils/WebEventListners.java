@@ -1,6 +1,8 @@
 package Utils;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -11,7 +13,6 @@ import org.openqa.selenium.support.events.WebDriverListener;
 import Base.BaseTest;
 
 public class WebEventListners extends BaseTest implements WebDriverListener {
-
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
 		System.out.println("Before navigating to: '" + url + "'");
@@ -53,13 +54,16 @@ public class WebEventListners extends BaseTest implements WebDriverListener {
 		System.out.println("Navigated forward to next page");
 	}
 
-	public void onException(Throwable error, WebDriver driver) {
-		System.out.println("Exception occured: " + error);
-		try {
-			CapturingScreenshot.getScreenshot();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	@Override
+	public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
+	    System.out.println("Exception occurred during method: " + method.getName());
+	    System.out.println("Error: " + e.getTargetException());
+
+	    try {
+	        CapturingScreenshot.getScreenshot("Exception_" + System.currentTimeMillis());
+	    } catch (IOException ioException) {
+	        ioException.printStackTrace();
+	    }
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
@@ -121,32 +125,32 @@ public class WebEventListners extends BaseTest implements WebDriverListener {
 
 	public <X> void afterGetScreenshotAs(OutputType<X> arg0, X arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void afterGetText(WebElement arg0, WebDriver arg1, String arg2) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void afterSwitchToWindow(String arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public <X> void beforeGetScreenshotAs(OutputType<X> arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void beforeGetText(WebElement arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void beforeSwitchToWindow(String arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

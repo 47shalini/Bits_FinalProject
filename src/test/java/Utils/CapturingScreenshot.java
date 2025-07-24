@@ -10,16 +10,19 @@ import org.openqa.selenium.TakesScreenshot;
 
 import Base.BaseTest;
 
-public class CapturingScreenshot extends BaseTest{
+public class CapturingScreenshot extends BaseTest {
 
-	public static void getScreenshot() throws IOException {
+	public static String getScreenshot(String testName) throws IOException {
+		String screenshotName = testName + "_" + System.currentTimeMillis() + ".png";
+		String destinationPath = System.getProperty("user.dir") + "/screenshots/" + screenshotName;
 
-		System.out.println("Listeners file executed");
-//		Date currentdate = new Date(0);
-//		String screenshotfilename = currentdate.toString().replace(" ", "-").replace(":", "-");
-		String screenshotfilename = System.currentTimeMillis()+"";
-		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screenshotFile, new File(System.getProperty("user.dir")+"/screenshots/"+screenshotfilename+".png"));
+		File screenshotFile = ((TakesScreenshot) BaseTest.getDriver()).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screenshotFile, new File(destinationPath));
+
+		return destinationPath;
 	}
 
+	public static String getScreenshot() throws IOException {
+		return getScreenshot("Exception");
+	}
 }

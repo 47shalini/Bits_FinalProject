@@ -1,5 +1,9 @@
 package Utils;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -11,62 +15,83 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReportManager implements ITestListener {
-	public ExtentSparkReporter sparkReporter; // UI of the report
-	public ExtentReports extent; // populate common info on the report
-	public static ExtentTest test; // creating test case entries in the report and update status of the test me
+
+	private static ExtentReports extent;
+	private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
 	public void onStart(ITestContext context) {
-		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/myReport. html");
-		sparkReporter.config().setDocumentTitle("Automation Report"); // Title of report
-		sparkReporter.config().setReportName("Functional Testing"); // name of the report
+		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+		String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport_" + timestamp + ".html";
+		System.out.println("Extent Report saved at: " + reportPath);
+		//sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/myReport. html");
+		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
+		sparkReporter.config().setDocumentTitle("Automation Report");
+		sparkReporter.config().setReportName("Functional Testing");
 		sparkReporter.config().setTheme(Theme.DARK);
 
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
-
 		extent.setSystemInfo("Computer Name", "localhost");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("Tester Name", "Shalini");
-		extent.setSystemInfo("os", "Windows10");
-		extent.setSystemInfo("Browser name", "Chrome");
+		extent.setSystemInfo("OS", System.getProperty("os.name"));
+		extent.setSystemInfo("Browser", Base.BaseTest.getBrowser());
+	}
 
+	public void onTestStart(ITestResult result) {
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName());
+		test.set(extentTest);
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		test = extent.createTest(result.getName()); // create a new entry in the report
-		test.log(Status.PASS, "Test case PASSED is:" + result.getName()); // update status p/f/s
+		getTest().log(Status.PASS, "Test case PASSED: " + result.getName());
 	}
 
 	public void onTestFailure(ITestResult result) {
-		test = extent.createTest(result.getName());
-		test.log(Status.FAIL, "Test case FAILED is:" + result.getName());
-		test.log(Status.FAIL, "Test Case FAILED cause is: " + result.getThrowable());
+		getTest().log(Status.FAIL, "Test case FAILED: " + result.getName());
+		getTest().log(Status.FAIL, "Failure Reason: " + result.getThrowable());
+
+		try {
+			String path = CapturingScreenshot.getScreenshot(result.getName());
+			getTest().addScreenCaptureFromPath(path);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		test = extent.createTest(result.getName());
-		test.log(Status.SKIP, "Test case SKIPPED is:" + result.getName());
+		getTest().log(Status.SKIP, "Test case SKIPPED: " + result.getName());
 	}
 
 	public void onFinish(ITestContext context) {
 		extent.flush();
 	}
 
-	// Method for adding logs as info from test cases
+	private static ExtentTest getTest() {
+		return test.get();
+	}
+
 	public static void reportLogInfo(String message) {
-		if (test != null) {
-			test.log(Status.INFO, message);
+		if (getTest() != null) {
+			getTest().log(Status.INFO, message);
 		} else {
 			System.out.println("[INFO] " + message);
 		}
 	}
 
-	// Method for adding logs as passed from test cases
 	public static void reportLogPass(String message) {
-		if (test != null) {
-			test.log(Status.PASS, message);
+		if (getTest() != null) {
+			getTest().log(Status.PASS, message);
 		} else {
 			System.out.println("[PASS] " + message);
+		}
+	}
+
+	public static void reportLogFail(String message) {
+		if (getTest() != null) {
+			getTest().log(Status.FAIL, message);
+		} else {
+			System.out.println("[FAIL] " + message);
 		}
 	}
 }
