@@ -22,15 +22,6 @@ public class LoginPageTest extends BaseTest {
 	// Thread-local objects to isolate per-thread test state
     private ThreadLocal<LoginPage> loginPage = new ThreadLocal<>();
 
-//    @BeforeSuite
-//    public void cleanOldReports() {
-//        File reportDir = new File("reports");
-//        if (reportDir.exists()) {
-//            for (File file : reportDir.listFiles()) {
-//                file.delete();
-//            }
-//        }
-//    }
     @BeforeMethod
     public void setup() {
         initialization(); // each thread gets its own WebDriver
@@ -69,3 +60,14 @@ public class LoginPageTest extends BaseTest {
 		ExtentReportManager.reportLogPass("Login functionality executed.");
 	}
 }
+
+
+//@BeforeSuite
+//public void cleanOldReports() {
+//  File reportDir = new File("reports");
+//  if (reportDir.exists()) {
+//      for (File file : reportDir.listFiles()) {
+//          file.delete();
+//      }
+//  }
+//}

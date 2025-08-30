@@ -6,7 +6,7 @@
 	</listeners>
   <test thread-count="3" parallel="methods" name="Test">
     <classes>
-      <class name="Tests.HomePageTest"/>
+      <class name="Tests.LoginPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

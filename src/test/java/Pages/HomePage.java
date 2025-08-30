@@ -27,7 +27,21 @@ public class HomePage extends BaseTest {
 	
 	@FindBy(className = "label-dropdown")
 	WebElement dropdown_searchSuggestions_homePage;
-
+	
+	@FindBy(xpath = "//ul[@class='navbar-nav']/li")
+	WebElement link_navBar_homePage;
+	
+	@FindBy(className = "li_strategies")
+	WebElement NavBarLink_strategiesNav_homepage;
+	
+	@FindBy(className = "li_analyzers")
+	WebElement NavBarLink_screenNav_homePage;
+	
+	@FindBy(className = "reportsdropdown")
+	WebElement NavBarLink_reportsNav_homePage;
+	
+	
+	
 	public HomePage() {
 		PageFactory.initElements(BaseTest.getDriver(), this);
 	}
@@ -59,5 +73,17 @@ public class HomePage extends BaseTest {
 		text_searchBox_homePage.clear();
 		
 	}
-
+	public Boolean validateNavigationMenu() {
+		return link_navBar_homePage.isDisplayed();
+	}
+	public Boolean validateStrategiesSubLinks() {
+		return NavBarLink_strategiesNav_homepage.isDisplayed();
+	}
+	public Boolean validateScreensSubLinks() {
+		return NavBarLink_screenNav_homePage.isDisplayed();
+	}
+	public Boolean validateReportsSubLinks() {
+		return NavBarLink_reportsNav_homePage.isDisplayed();
+	}
+	
 }

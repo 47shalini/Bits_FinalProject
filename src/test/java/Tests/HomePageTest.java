@@ -36,13 +36,12 @@ public class HomePageTest extends BaseTest {
 
 	@Test
 	public void validateHomepageTitle() {
-		ExtentReportManager.reportLogInfo("User logged in successfully.");
-		String title = homePage.validateTitle();
-		ExtentReportManager.reportLogInfo("Home Page Title: " + title);
-		Assert.assertEquals(title, "Trade Panel :: Neostox", "Title is mismatching");
-		ExtentReportManager.reportLogPass("Home Page title validation passed.");
-
 		try {
+			ExtentReportManager.reportLogInfo("User logged in successfully.");
+			String title = homePage.validateTitle();
+			ExtentReportManager.reportLogInfo("Home Page Title: " + title);
+			Assert.assertEquals(title, "Trade Panel :: Neostox", "Title is mismatching");
+			ExtentReportManager.reportLogPass("Home Page title validation passed.");
 			Thread.sleep(9000); // Use Thread.sleep instead of driver.wait
 		} catch (InterruptedException e) {
 			e.printStackTrace();
