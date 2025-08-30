@@ -28,7 +28,6 @@ public class ExtentReportManager implements ITestListener {
 		sparkReporter.config().setDocumentTitle("Automation Report");
 		sparkReporter.config().setReportName("Functional Testing");
 		sparkReporter.config().setTheme(Theme.DARK);
-
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		extent.setSystemInfo("Computer Name", "localhost");
