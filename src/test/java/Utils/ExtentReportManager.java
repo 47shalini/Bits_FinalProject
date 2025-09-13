@@ -21,7 +21,8 @@ public class ExtentReportManager implements ITestListener {
 
 	public void onStart(ITestContext context) {
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-		String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport_" + timestamp + ".html";
+		//String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport_" + timestamp + ".html";
+		String reportPath = System.getProperty("user.dir") + "/test-output/Extent.html";
 		System.out.println("Extent Report saved at: " + reportPath);
 		//sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/myReport. html");
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);

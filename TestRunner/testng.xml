@@ -4,7 +4,7 @@
 	<listeners>
 		<listener class-name="Utils.ExtentReportManager" />
 	</listeners>
-  <test thread-count="1" parallel="methods" name="Test">
+  <test thread-count="1" parallel="none" name="Test">
     <classes>
       <class name="Tests.LoginPageTest"/>
     </classes>
