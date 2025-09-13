@@ -10,7 +10,6 @@ public class ReadPropertiesFile {
 		// TODO Auto-generated method stub
 		
 		FileReader fr = new FileReader(System.getProperty("user.dir")+"\\src\\test\\resources\\configFile\\Config.properties");
-		
 		Properties properties = new Properties();
 		properties.load(fr);
 		return properties.getProperty(Key);
