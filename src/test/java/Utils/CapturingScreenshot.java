@@ -25,4 +25,5 @@ public class CapturingScreenshot extends BaseTest {
 	public static String getScreenshot() throws IOException {
 		return getScreenshot("Exception");
 	}
+	
 }

@@ -58,7 +58,6 @@ public class WebEventListners extends BaseTest implements WebDriverListener {
 	public void onError(Object target, Method method, Object[] args, InvocationTargetException e) {
 	    System.out.println("Exception occurred during method: " + method.getName());
 	    System.out.println("Error: " + e.getTargetException());
-
 	    try {
 	        CapturingScreenshot.getScreenshot("Exception_" + System.currentTimeMillis());
 	    } catch (IOException ioException) {
