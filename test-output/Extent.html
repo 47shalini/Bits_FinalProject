@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Functional Testing</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 15, 2025 08:07:35 pm</span></a>
+<a href="#"><span class="badge badge-primary">Sep 15, 2025 09:26:34 pm</span></a>
 </li>
 </ul>
 </div>
@@ -67,6 +67,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginPageTitleTest</p>
+            <p class="name">placeEquityOrderTest</p>
             <p class="text-sm">
-              <span>8:07:45 pm</span> / <span>00:00:00:283</span>
+              <span>9:26:51 pm</span> / <span>00:00:04:421</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +90,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">loginPageTitleTest</h5>
-<span class='badge badge-success'>09.15.2025 8:07:45 pm</span>
-<span class='badge badge-danger'>09.15.2025 8:07:45 pm</span>
-<span class='badge badge-default'>00:00:00:283</span>
+<h5 class="test-status text-pass">placeEquityOrderTest</h5>
+<span class='badge badge-success'>09.15.2025 9:26:51 pm</span>
+<span class='badge badge-danger'>09.15.2025 9:26:55 pm</span>
+<span class='badge badge-default'>00:00:04:421</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,23 +106,37 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>8:07:45 pm</td>
+        <td>9:26:51 pm</td>
         <td>
-          Title fetched: Neostox Virtual Stock Simulator | Trading Simulator | Option Simulator
+          Placing Equity Order with: Security = irfc, Type = Equity, Qty = 7.0, Buy/Sell = Buy
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:07:45 pm</td>
+        <td>9:26:54 pm</td>
         <td>
-          Title matched successfully.
+          Entered text in the search box: irfc
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:07:45 pm</td>
+        <td>9:26:55 pm</td>
         <td>
-          Test case PASSED: loginPageTitleTest
+          Selected security symbol
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:26:55 pm</td>
+        <td>
+          Equity order placed successfully.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:26:55 pm</td>
+        <td>
+          Test case PASSED: placeEquityOrderTest
         </td>
       </tr>
   </tbody>
@@ -129,47 +144,77 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="fail" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginTest</p>
+            <p class="name">placeEquityOrderTest</p>
             <p class="text-sm">
-              <span>8:07:52 pm</span> / <span>00:00:02:989</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>9:27:07 pm</span> / <span>00:00:13:520</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">loginTest</h5>
-<span class='badge badge-success'>09.15.2025 8:07:52 pm</span>
-<span class='badge badge-danger'>09.15.2025 8:07:55 pm</span>
-<span class='badge badge-default'>00:00:02:989</span>
+<h5 class="test-status text-fail">placeEquityOrderTest</h5>
+<span class='badge badge-success'>09.15.2025 9:27:07 pm</span>
+<span class='badge badge-danger'>09.15.2025 9:27:20 pm</span>
+<span class='badge badge-default'>00:00:13:520</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\Shalini\Documents\Bits project\WebPlatform_for_Financial_Trading_Application\Web_Platform_For_Financial_Trading_Application/screenshots/placeEquityOrderTest_1757951840317.png' src="C:\Users\Shalini\Documents\Bits project\WebPlatform_for_Financial_Trading_Application\Web_Platform_For_Financial_Trading_Application/screenshots/placeEquityOrderTest_1757951840317.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:07:55 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:07 pm</td>
         <td>
-          Login functionality executed.
+          Placing Equity Order with: Security = suzlon energy, Type = Equity, Qty = 5.0, Buy/Sell = Buy
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:07:55 pm</td>
+        <td>9:27:10 pm</td>
         <td>
-          Test case PASSED: loginTest
+          Entered text in the search box: suzlon energy
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:27:20 pm</td>
+        <td>
+          Test case FAILED: placeEquityOrderTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:27:20 pm</td>
+        <td>
+          Failure Reason: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".label\-dropdown"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d54b70d100014a1dd1fb8aff36ee1a1d, findElement {value=label-dropdown, using=class name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Shalini\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51228/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d54b70d100014a1dd1fb8aff36ee1a1d
         </td>
       </tr>
   </tbody>
@@ -182,9 +227,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">neoStockImgTest</p>
+            <p class="name">placeEquityOrderTest</p>
             <p class="text-sm">
-              <span>8:08:04 pm</span> / <span>00:00:00:100</span>
+              <span>9:27:31 pm</span> / <span>00:00:04:090</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -192,10 +237,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">neoStockImgTest</h5>
-<span class='badge badge-success'>09.15.2025 8:08:04 pm</span>
-<span class='badge badge-danger'>09.15.2025 8:08:04 pm</span>
-<span class='badge badge-default'>00:00:00:100</span>
+<h5 class="test-status text-pass">placeEquityOrderTest</h5>
+<span class='badge badge-success'>09.15.2025 9:27:31 pm</span>
+<span class='badge badge-danger'>09.15.2025 9:27:35 pm</span>
+<span class='badge badge-default'>00:00:04:090</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -207,17 +252,302 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:08:04 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:31 pm</td>
         <td>
-          NeoStock image is displayed.
+          Placing Equity Order with: Security = idfc first bank, Type = Equity, Qty = 4.0, Buy/Sell = Buy
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>8:08:04 pm</td>
+        <td>9:27:34 pm</td>
         <td>
-          Test case PASSED: neoStockImgTest
+          Entered text in the search box: idfc first bank
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:35 pm</td>
+        <td>
+          Selected security symbol
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:35 pm</td>
+        <td>
+          Equity order placed successfully.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:35 pm</td>
+        <td>
+          Test case PASSED: placeEquityOrderTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">placeEquityOrderTest</p>
+            <p class="text-sm">
+              <span>9:27:48 pm</span> / <span>00:00:03:922</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">placeEquityOrderTest</h5>
+<span class='badge badge-success'>09.15.2025 9:27:48 pm</span>
+<span class='badge badge-danger'>09.15.2025 9:27:52 pm</span>
+<span class='badge badge-default'>00:00:03:922</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:27:48 pm</td>
+        <td>
+          Placing Equity Order with: Security = rail vikas nigam, Type = Equity, Qty = 9.0, Buy/Sell = Buy
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:51 pm</td>
+        <td>
+          Entered text in the search box: rail vikas nigam
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:52 pm</td>
+        <td>
+          Selected security symbol
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:52 pm</td>
+        <td>
+          Equity order placed successfully.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:27:52 pm</td>
+        <td>
+          Test case PASSED: placeEquityOrderTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">placeEquityOrderTest</p>
+            <p class="text-sm">
+              <span>9:28:02 pm</span> / <span>00:00:03:819</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">placeEquityOrderTest</h5>
+<span class='badge badge-success'>09.15.2025 9:28:02 pm</span>
+<span class='badge badge-danger'>09.15.2025 9:28:06 pm</span>
+<span class='badge badge-default'>00:00:03:819</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:02 pm</td>
+        <td>
+          Placing Equity Order with: Security = hathway cable, Type = Equity, Qty = 45.0, Buy/Sell = Buy
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:28:05 pm</td>
+        <td>
+          Entered text in the search box: hathway cable
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:28:06 pm</td>
+        <td>
+          Selected security symbol
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:28:06 pm</td>
+        <td>
+          Equity order placed successfully.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:28:06 pm</td>
+        <td>
+          Test case PASSED: placeEquityOrderTest
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validateHomepageTitle</p>
+            <p class="text-sm">
+              <span>9:28:17 pm</span> / <span>00:00:12:572</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validateHomepageTitle</h5>
+<span class='badge badge-success'>09.15.2025 9:28:17 pm</span>
+<span class='badge badge-danger'>09.15.2025 9:28:30 pm</span>
+<span class='badge badge-default'>00:00:12:572</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:17 pm</td>
+        <td>
+          User logged in successfully.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:28:21 pm</td>
+        <td>
+          Home Page Title: Trade Panel :: Neostox
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:28:21 pm</td>
+        <td>
+          Home Page title validation passed.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:28:30 pm</td>
+        <td>
+          Test case PASSED: validateHomepageTitle
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">validationNavigationMenuTest</p>
+            <p class="text-sm">
+              <span>9:28:41 pm</span> / <span>00:00:14:399</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">validationNavigationMenuTest</h5>
+<span class='badge badge-success'>09.15.2025 9:28:41 pm</span>
+<span class='badge badge-danger'>09.15.2025 9:28:55 pm</span>
+<span class='badge badge-default'>00:00:14:399</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\Shalini\Documents\Bits project\WebPlatform_for_Financial_Trading_Application\Web_Platform_For_Financial_Trading_Application/screenshots/validationNavigationMenuTest_1757951935560.png' src="C:\Users\Shalini\Documents\Bits project\WebPlatform_for_Financial_Trading_Application\Web_Platform_For_Financial_Trading_Application/screenshots/validationNavigationMenuTest_1757951935560.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:28:55 pm</td>
+        <td>
+          Test case FAILED: validationNavigationMenuTest
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:28:55 pm</td>
+        <td>
+          Failure Reason: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".li_strategies"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20bafa97f7dd03325717d46ec28cbae9, findElement {value=li_strategies, using=class name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Shalini\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50727/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 20bafa97f7dd03325717d46ec28cbae9
         </td>
       </tr>
   </tbody>
@@ -239,25 +569,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 15, 2025 08:07:35 pm</h3>
+<h3>Sep 15, 2025 09:26:34 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 15, 2025 08:08:04 pm</h3>
+<h3>Sep 15, 2025 09:28:56 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>3</h3>
+<h3>5</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -273,12 +603,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>3</b> tests passed
+<div><small data-tooltip='71%'>
+<b>5</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='28%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -296,10 +626,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='85%'><b>6</b> events passed</small></div>
+<div><small data-tooltip='63%'><b>19</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>1</b> others
+<small data-tooltip='13%'><b>4</b> events failed,
+<b data-tooltip='%'>7</b> others
 </small>
 </div>
 </div>
@@ -315,7 +645,7 @@
 </div></div>
 <script>
 var timeline = {
-"loginPageTitleTest":0.283,"loginTest":2.989,"neoStockImgTest":0.1
+"placeEquityOrderTest":4.421,"placeEquityOrderTest":13.52,"placeEquityOrderTest":4.09,"placeEquityOrderTest":3.922,"placeEquityOrderTest":3.819,"validateHomepageTitle":12.572,"validationNavigationMenuTest":14.399
 };
 </script>
 <div class="row">
@@ -354,8 +684,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 3,
-failParent: 0,
+passParent: 5,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -371,11 +701,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 6,
-failEvents: 0,
+passEvents: 19,
+failEvents: 4,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 1
+infoEvents: 7
 };
 </script>        </div>
       </div>
