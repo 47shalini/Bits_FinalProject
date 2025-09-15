@@ -28,18 +28,18 @@ public class HomePage extends BaseTest {
 	@FindBy(className = "label-dropdown")
 	WebElement dropdown_searchSuggestions_homePage;
 	
-	@FindBy(xpath = "//ul[@class='navbar-nav']/li")
-	WebElement link_navBar_homePage;
-	
-	@FindBy(className = "li_strategies")
-	WebElement NavBarLink_strategiesNav_homepage;
-	
-	@FindBy(className = "li_analyzers")
-	WebElement NavBarLink_screenNav_homePage;
-	
-	@FindBy(className = "reportsdropdown")
-	WebElement NavBarLink_reportsNav_homePage;
-	
+//	@FindBy(xpath = "//ul[@class='navbar-nav']/li")
+//	WebElement link_navBar_homePage;
+//	
+//	@FindBy(className = "li_strategies")
+//	WebElement NavBarLink_strategiesNav_homepage;
+//	
+//	@FindBy(className = "li_analyzers")
+//	WebElement NavBarLink_screenNav_homePage;
+//	
+//	@FindBy(className = "reportsdropdown")
+//	WebElement NavBarLink_reportsNav_homePage;
+//	
 	
 	
 	public HomePage() {
