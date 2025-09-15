@@ -11,7 +11,6 @@
           <include name="setUP"/>
           <include name="tearDown"/>
           <include name="validationNavigationMenuTest"/>
-          <include name="placeEquityOrderTest" invocation-numbers="1"/>
         </methods>
       </class> <!-- Tests.HomePageTest -->
     </classes>

@@ -51,8 +51,6 @@ public class LoginPage extends BaseTest {
 
 		text_userID_loginPage.sendKeys(properties.getProperty("LoginId"));
 		btn_Submit.click();
-
-
 		text_password_loginPage.sendKeys(properties.getProperty("Password"));
 		WebDriverWait wait = new WebDriverWait(BaseTest.getDriver(), Duration.ofSeconds(20));
 		WebElement signInLink = wait.until(ExpectedConditions.elementToBeClickable(btn_signIn_loginPage));

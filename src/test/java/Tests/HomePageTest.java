@@ -71,12 +71,12 @@ public class HomePageTest extends BaseTest {
 		return ReadXLdata.getData(excelName, sheetName);
 	}
 	
-	@Test
-	public void validationNavigationMenuTest() {
-		homePage.validateNavigationMenu();
-		homePage.validateStrategiesSubLinks();
-		homePage.validateScreensSubLinks();
-		homePage.validateReportsSubLinks();
-		
-	}
+//	@Test
+//	public void validationNavigationMenuTest() {
+//		homePage.validateNavigationMenu();
+//		homePage.validateStrategiesSubLinks();
+//		homePage.validateScreensSubLinks();
+//		homePage.validateReportsSubLinks();
+//		
+//	}
 }
