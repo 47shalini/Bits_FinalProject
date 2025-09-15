@@ -73,17 +73,17 @@ public class HomePage extends BaseTest {
 		text_searchBox_homePage.clear();
 		
 	}
-	public Boolean validateNavigationMenu() {
-		return link_navBar_homePage.isDisplayed();
-	}
-	public Boolean validateStrategiesSubLinks() {
-		return NavBarLink_strategiesNav_homepage.isDisplayed();
-	}
-	public Boolean validateScreensSubLinks() {
-		return NavBarLink_screenNav_homePage.isDisplayed();
-	}
-	public Boolean validateReportsSubLinks() {
-		return NavBarLink_reportsNav_homePage.isDisplayed();
-	}
+//	public Boolean validateNavigationMenu() {
+//		return link_navBar_homePage.isDisplayed();
+//	}
+//	public Boolean validateStrategiesSubLinks() {
+//		return NavBarLink_strategiesNav_homepage.isDisplayed();
+//	}
+//	public Boolean validateScreensSubLinks() {
+//		return NavBarLink_screenNav_homePage.isDisplayed();
+//	}
+//	public Boolean validateReportsSubLinks() {
+//		return NavBarLink_reportsNav_homePage.isDisplayed();
+//	}
 	
 }
